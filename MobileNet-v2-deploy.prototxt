@@ -3161,6 +3161,15 @@ layer {
   }
 }
 layer {
+  name: "dropout"
+  type: "Dropout"
+  bottom: "pool9"
+  top: "pool9"
+  dropout_param {
+    dropout_ratio : 0.2
+  }
+}
+layer {
   name: "conv10"
   type: "Convolution"
   bottom: "pool9"
