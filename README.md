@@ -2,10 +2,10 @@
 MobileNet-v2 experimental network description for caffe.
 
 ### Update
-1. Google has release a series of mobilenet-v2 models. So reference pretrained model from tensorflow/model repository.
-2. MobileNet-V2 has accepted by CVPR 2018. The latest ilsvrc12 top1 accuracy is 72.0%. 
+1. Google has released a series of mobilenet-v2 models. So reference pretrained model from tensorflow/model repository.
+2. MobileNet-V2 has accepted by CVPR 2018. The latest ilsvrc12 top1 accuracy is **72.0%**. 
 3. According to google official model, mobilenet-v2 downsampled feature map early.
-4. shortcuts are placed exception the first inverted residual bottleneck sequence.
+4. shortcuts are placed except the first inverted residual bottleneck sequence.
 
 ### Note
 There are some unclear details about the network architechture.
