@@ -1,9 +1,18 @@
-name: "MobileNet-v2"
-input: "data"
-input_dim: 1
-input_dim: 3
-input_dim: 224
-input_dim: 224
+layer {
+  name: "data"
+  type: "MemoryData"
+  top: "data"
+  top: "label"
+  transform_param {
+    crop_size: 224
+  }
+  memory_data_param {
+    batch_size: 1
+    channels: 3
+    height: 224
+    width: 224
+  }
+}
 layer {
   name: "conv_1_1"
   type: "Convolution"
@@ -15,7 +24,7 @@ layer {
   }
   convolution_param {
     num_output: 32
-    bias_term: false
+    bias_term: true
     pad: 1
     kernel_size: 3
     stride: 2
@@ -46,7 +55,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -106,7 +115,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -168,7 +177,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -228,7 +237,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -282,7 +291,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -344,7 +353,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -404,7 +413,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -458,7 +467,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -520,7 +529,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -580,7 +589,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -641,7 +650,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -703,7 +712,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -763,7 +772,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -817,7 +826,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -879,7 +888,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -939,7 +948,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1000,7 +1009,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1062,7 +1071,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1122,7 +1131,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1183,7 +1192,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1245,7 +1254,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1305,7 +1314,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1359,7 +1368,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1421,7 +1430,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1481,7 +1490,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1542,7 +1551,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1604,7 +1613,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1664,7 +1673,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1725,7 +1734,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1787,7 +1796,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1847,7 +1856,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1908,7 +1917,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -1970,7 +1979,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2030,7 +2039,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2084,7 +2093,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2146,7 +2155,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2206,7 +2215,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2267,7 +2276,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2329,7 +2338,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2389,7 +2398,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2450,7 +2459,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2512,7 +2521,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2572,7 +2581,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2626,7 +2635,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2688,7 +2697,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2748,7 +2757,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2809,7 +2818,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2871,7 +2880,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2931,7 +2940,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -2992,7 +3001,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -3054,7 +3063,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -3114,7 +3123,7 @@ layer {
     decay_mult: 0.0
   }
   batch_norm_param {
-    use_global_stats: true
+    use_global_stats: false
   }
 }
 layer {
@@ -3127,16 +3136,17 @@ layer {
   }
 }
 layer {
-  name: "conv9"
+  name: "conv_conv9"
   type: "Convolution"
   bottom: "conv_8_1_linear"
-  top: "conv9"
+  top: "conv_conv9"
   param {
     lr_mult: 1.0
     decay_mult: 1.0
   }
   convolution_param {
     num_output: 1280
+    bias_term: true
     pad: 0
     kernel_size: 1
     stride: 1
@@ -3150,23 +3160,50 @@ layer {
   }
 }
 layer {
+  name: "bn_conv9"
+  type: "BatchNorm"
+  bottom: "conv_conv9"
+  top: "conv_conv9"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  batch_norm_param {
+    use_global_stats: false
+  }
+}
+layer {
+  name: "scale_conv9"
+  type: "Scale"
+  bottom: "conv_conv9"
+  top: "conv_conv9"
+  scale_param {
+    bias_term: true
+  }
+}
+layer {
+  name: "relu_conv9"
+  type: "ReLU"
+  bottom: "conv_conv9"
+  top: "conv_conv9"
+}
+layer {
   name: "pool9"
   type: "Pooling"
-  bottom: "conv9"
+  bottom: "conv_conv9"
   top: "pool9"
   pooling_param {
     pool: AVE
     stride: 1
     global_pooling: true
-  }
-}
-layer {
-  name: "dropout"
-  type: "Dropout"
-  bottom: "pool9"
-  top: "pool9"
-  dropout_param {
-    dropout_ratio : 0.2
   }
 }
 layer {
@@ -3194,8 +3231,9 @@ layer {
 }
 layer {
   name: "loss"
-  type: "Softmax"
+  type: "SoftmaxWithLoss"
   bottom: "conv10"
+  bottom: "label"
   top: "loss"
 }
 
