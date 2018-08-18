@@ -1,6 +1,10 @@
 # MobileNet-v2-caffe
 MobileNet-v2 experimental network description for caffe.
 
+### Update 2018-08-18
+1. Add other Mobilenet-v2 variants
+2. Suggestion: cudnn v7 has supported depthwise 3x3 when `group == input_channel`, you may speed up your training process by using the latest cudnn v7. 
+
 ### Update
 1. Google has released a series of mobilenet-v2 models. So reference pretrained model from tensorflow/model repository.
 2. MobileNet-V2 has accepted by CVPR 2018. The latest ilsvrc12 top1 accuracy is **72.0%**. 
